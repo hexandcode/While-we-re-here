@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Montserrat Alternates';
+  src: url('./assets/fonts/MontserratAlternates-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  src: url('./assets/fonts/MontserratAlternates-Light.woff2') format('woff2');
+  font-weight: 300;
+}
+
+:root {
+  --bg: #fad9f4;
+  --text: #aa2c20;
+  --accent: #e581d7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat Alternates', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  min-height: 100dvh;
+}
+
+body::after {
+  content:'';
+  position: fixed;
+  inset: 0;
+  background: url('/grain.png');
+  pointer-events: none;
+  z-index: 0;
+}

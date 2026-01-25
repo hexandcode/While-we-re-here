@@ -1,0 +1,19 @@
+.arrow {
+  position: absolute;
+  bottom: 40px;
+  font-size: 32px;
+  opacity: 0.9;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  animation: fade 2.5s infinite;
+}
+
+.arrow.hidden {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+@keyframes fade {
+  0%,100%{opacity:.3;}
+  50%{opacity:.6;}
+}
